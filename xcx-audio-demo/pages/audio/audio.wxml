@@ -1,0 +1,20 @@
+<!--pages/audio/audio.wxml-->
+
+<block wx:for="{{audioArr}}" wx:key="content" wx:for-item="v" wx:for-index="key">
+  <view class='output-audio'>
+
+    <!-- 默认状态 -->
+    <view class='audio' wx:if="{{v.bl==false}}" bindtap='audioPlay' data-key="{{key}}" data-id="{{v.id}}" data-bl="{{v.bl}}">
+      <image class='ico' src='https://xcx.quan5fen.com/Public/xcx-hitui/image/imgs-jyh/yuyin-ico.png' />
+      <label class='time'>{{v.time}}</label>
+    </view>
+
+    <!-- 当前正在播放状态 -->
+    <view class='audio' wx:if="{{v.bl==true}}" bindtap='audioStop' data-key="{{key}}"  data-id="{{v.id}}" data-bl="{{v.bl}}">
+      <image class='ico' src='https://xcx.quan5fen.com/Public/xcx-hitui/image/imgs-jyh/yuyin-gif.gif' />
+      <label class='time'>{{v.time}}</label>
+    </view>
+
+  </view>
+</block>
+

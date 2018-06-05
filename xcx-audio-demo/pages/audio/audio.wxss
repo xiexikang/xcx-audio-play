@@ -1,0 +1,7 @@
+/* pages/audio/audio.wxss */
+
+.output-audio{ width: 150rpx; margin: 30rpx; }
+.output-audio .audio{  padding: 20rpx; border-radius: 10rpx;background-color: #fff;
+border: 1px solid #f0f0f0; overflow: hidden; }
+.output-audio .audio .ico{ width: 26rpx; height: 30rpx; float: left;}
+.output-audio .audio .time{ float: right; font-size: 24rpx;}
