@@ -10,6 +10,8 @@ Page({
    */
   data: {
 
+    imgsUrl:'../images/', //图片路径
+
     //音频列表
     audioArr: [
       {
