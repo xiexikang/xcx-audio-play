@@ -2,15 +2,15 @@
 
 <block wx:for="{{audioArr}}" wx:key="content" wx:for-item="v" wx:for-index="key">
   <view class='output-audio'>
-
-    <!-- 默认状态 -->
-    <view class='audio' wx:if="{{v.bl==false}}" bindtap='audioPlay' data-key="{{key}}" data-id="{{v.id}}" data-bl="{{v.bl}}">
+  
+    <!-- 默认状态 未播放 -->
+    <view class='audio' wx:if="{{!v.bl}}" bindtap='audioPlay' data-key="{{key}}" data-id="{{v.id}}" data-bl="{{v.bl}}">
       <image class='ico' src='{{imgsUrl}}/yuyin-ico.png' />
       <label class='time'>{{v.time}}</label>
     </view>
 
     <!-- 当前正在播放状态 -->
-    <view class='audio' wx:if="{{v.bl==true}}" bindtap='audioStop' data-key="{{key}}"  data-id="{{v.id}}" data-bl="{{v.bl}}">
+    <view class='audio' wx:if="{{v.bl}}" bindtap='audioStop' data-key="{{key}}"  data-id="{{v.id}}" data-bl="{{v.bl}}">
       <image class='ico' src='{{imgsUrl}}/yuyin-gif.gif' />
       <label class='time'>{{v.time}}</label>
     </view>
